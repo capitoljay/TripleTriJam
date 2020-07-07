@@ -1,0 +1,73 @@
+Attacker
+
+Now that you've defended your planet, go on the offensive and attack the aliens on their home turf.
+
+Destroy their defending forces while you abduct aliens on each world.  Once you've captured all the aliens, you win the round.
+
+When you're carrying an alien your ship moves much slower.  The goal is to bring the alien up to your mothership which appears at the top of the screen when you pick up an alien.
+
+Controls
+	Flight up/down/left/right
+	Laser - Normal weapon
+	Abduction Ray - Picks up aliens to abduct them
+
+Mechanics
+	-When you abduct an alien, your mothership appears overhead.
+	-Fly to the mothership with the alien to abduct them
+	-Attack enemy defenders to keep them from destroying you
+	-Attack ground defenses to get close to the aliens to abduct them.
+
+
+Goals
+
+DONE	-Create a ship that can move left/right/up/down
+DONE	-Make the ship be able to shoot
+DONE	-Implement abduction ray and aliens
+DONE	-UI Life Counter
+DONE	-UI Score Counter
+DONE	-Implement mothership/drop-off mechanics
+DONE	-Create a side scrolling area with a ground plane
+DONE	-Implement spawning algorithm
+DONE		-Input player name
+DONE		-Use Perlin to spawn objects
+DONE		-Implement for aliens and enemies
+	-Implement basic enemy (lander) that can shoot
+	-Terrain/Buildings
+	-Implement ground defenses (blaster tower)
+		-Add enemy targeting chain reaction on destruction
+	-Negative feedback loop based enemy speed
+	-Implement advanced enemies (bomber, baiter, pod/swarmers
+	-UI Minimap
+	-SFX
+	-Music
+
+	-Fix Enemy AI and add projectiles
+	-Negative FeedbackLoop (Enemies faster when you abduct aliens)
+	-Add Sound
+
+    THEMES
+	-Chain Reaction
+		-When defense towers explode they chain across multiple enemies and destroy them.
+	-Negative Feedback Loop
+		-Each alien you capture increases enemy speed
+		-Dying resets and lowers enemy speed to start
+DONE	-Novel Twist on Classic Game
+
+    BONUS
+	-Add player name and procedural level generation
+	-Add Dynamic Music
+	-Multi-input (WASD, ZQSD, IJKL, and ArrowKeys)
+	-Color Blindness Filter testing
+		
+
+Mechanics
+	Laser spheres are ground defenses that can shoot you with ball projectiles
+
+	Shooting a laser sphere will create a chain reaction to destroy multiple enemies
+	
+	Pick up aliens with your abduction ray and bring them to your mothership
+	
+	Destroy defending alien enemies to score more points
+
+	The more aliens you abduct, the faster the enemies get.  If you die, it resets.
+
