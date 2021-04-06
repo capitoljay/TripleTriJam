@@ -5793,6 +5793,7 @@ GameObject:
   - component: {fileID: 504930190}
   - component: {fileID: 504930192}
   - component: {fileID: 504930191}
+  - component: {fileID: 504930193}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -5890,6 +5891,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &504930193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504930189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7cd5cf42781014a835ba7dcc226700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundaryType: 1
+  otherBoundary: {fileID: 811761662}
+  spawnOffset: -1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5901,7 +5917,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5917,21 +5932,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
---- !u!114 &519420030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f64704b1be31914cb8bd40ecccb05a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  followObject: {fileID: 0}
-  followSpeed: 15
-  horizontalOffsetMax: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -6725,6 +6725,7 @@ GameObject:
   - component: {fileID: 811761659}
   - component: {fileID: 811761661}
   - component: {fileID: 811761660}
+  - component: {fileID: 811761662}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -6770,7 +6771,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 1}
+  m_Size: {x: 0.64, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &811761661
 SpriteRenderer:
@@ -6822,6 +6823,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &811761662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811761658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7cd5cf42781014a835ba7dcc226700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundaryType: 0
+  otherBoundary: {fileID: 504930193}
+  spawnOffset: 1
 --- !u!1 &859927995
 GameObject:
   m_ObjectHideFlags: 0
@@ -7382,6 +7398,8 @@ MonoBehaviour:
   scoreMgr: {fileID: 0}
   xAxisMinimum: -37
   xAxisMaximum: 37
+  objectsToRelocateRecursive: []
+  objectRelocateTimeout: 2
 --- !u!1 &1068749639
 GameObject:
   m_ObjectHideFlags: 0
@@ -9416,6 +9434,7 @@ GameObject:
   - component: {fileID: 1927306142}
   - component: {fileID: 1927306141}
   - component: {fileID: 1927306140}
+  - component: {fileID: 1927306143}
   m_Layer: 0
   m_Name: Mothership
   m_TagString: Untagged
@@ -9539,6 +9558,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1927306143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927306138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7cd5cf42781014a835ba7dcc226700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundaryType: 1
+  otherBoundary: {fileID: 811761662}
+  spawnOffset: -1
 --- !u!1 &1959600509
 GameObject:
   m_ObjectHideFlags: 0

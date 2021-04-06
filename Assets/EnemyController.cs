@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     private float projectileTimeout = 0f;
 
     public float moveSpeed = 5f;
+    public float maxSpeed = 15f;
     private Vector3 moveDirection = Vector3.zero;
     private float moveCheckCountdown = 0f;
     // Start is called before the first frame update
@@ -53,19 +54,20 @@ public class EnemyController : MonoBehaviour
             {
                 moveDirection += new Vector3(0f, Random.value * -1, 0f);
             }
+
+            if (Mathf.Abs(moveDirection.x) > maxSpeed)
+            {
+                moveDirection.x = moveDirection.x < 0 ? maxSpeed * -1 : maxSpeed;
+            }
+            if (Mathf.Abs(moveDirection.y) > maxSpeed)
+            {
+                moveDirection.y = moveDirection.y < 0 ? maxSpeed * -1 : maxSpeed;
+            }
         }
 
         transform.Translate(moveDirection * (moveSpeed + scoreMgr.extraMoveSpeed ) * Time.deltaTime);
-        //TODO: Remove this hard-coding
-        if (transform.position.x < -38)
-            transform.position += new Vector3(38 * 2, 0f, 0f);
-        if (transform.position.x > 38)
-            transform.position -= new Vector3(38 * 2, 0f, 0f);
-        if (transform.position.y < -4)
-            transform.position -= new Vector3(0f, 10f, 0f);
-        if (transform.position.y > 6)
-            transform.position -= new Vector3(0f, 10f, 0f);
     }
+
     private void Shoot()
     {
         if (projectileTimeout <= 0f)
@@ -98,6 +100,15 @@ public class EnemyController : MonoBehaviour
 
     private void CheckCollision(Collider2D collision)
     {
+        var enemyBoundary = collision.gameObject.GetComponent<EnemyBoundary>();
+        if (enemyBoundary != null && enemyBoundary.otherBoundary != null)
+        {
+            transform.position = new Vector3(
+                transform.position.x,
+                enemyBoundary.otherBoundary.transform.position.y + enemyBoundary.spawnOffset,
+                transform.position.z
+                );
+        }
         //if (collision.gameObject != null)
         //{
         //    var projectile = collision.gameObject.GetComponent<Projectile>();
